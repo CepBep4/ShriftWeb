@@ -2,7 +2,7 @@ from flask import Flask, render_template, make_response, url_for, request, sessi
 import json
 from database import check_auth
 import database
-from constructer_effect import ConstructProgect
+#from constructer_effect import ConstructProgect
 import os
 from random import randint
 
@@ -105,4 +105,4 @@ def addshrift():
     return str(session['user_id'])
 
 if __name__ == '__main__':
-    app.run(debug=True, host='')
+    app.run()
