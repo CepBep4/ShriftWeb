@@ -104,4 +104,4 @@ def addshrift():
     database.save(session['user_id'],usercell)
     return str(session['user_id'])
 
-app.run(host='94.228.123.131', port=443)
+app.run(host='94.228.123.131', port=8080)
