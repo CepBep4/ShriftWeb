@@ -105,4 +105,4 @@ def addshrift():
     return str(session['user_id'])
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='94.228.123.131', port=8000)
