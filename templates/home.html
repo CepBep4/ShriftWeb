@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LadyBrill</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../static/icon.ico" />
+</head>
+    <script src="{{url_for('static', filename='main.js')}}"></script>
+    <script src="{{url_for('static', filename='login.js')}}"></script>
+    <link rel="stylesheet"  type="text/css" href="{{url_for('static', filename='home.css')}}">
+    <link rel="stylesheet" href="../static/home.css">
+<body onload="window.addEventListener('resize', function(event) {document.body.style.zoom = 1/1920*outerWidth;}, true); document.body.style.zoom = 1/1920*outerWidth; checkOnLoad();">
+    <!-- <form>
+        <button onclick="LoginExit();">Выйти</button>
+    </form> -->
+    <div class="main-head">
+        <div id="label-company-main">LADY BRILL</div>
+        <img src="../static/logo_icon.svg" id="head-icon">
+        <input type="image" src="../static/contact-support.svg" id="button-support" onclick="window.location.replace('https://t.me/LadyBrillHelper');">
+        <input type="image" src="../static/iconamoon_exitl.svg" id="button-exit" onclick="LoginExit();">
+        <div id="label-school-incrustation">школа инкрустации</div>
+    </div>
+    <div class="main-pannel-control">
+        <div id="label-project-settings">Проект</div>
+        <p>
+            <div id="text-weight">Ширина</div>
+            <input class="main-pannel-control" type="number" id="input-real-width" oninput="checkInputSize();">
+            <div id="text-metrical-1">см</div> 
+        </p>
+        <p>
+            <div id="text-height">Высота </div>
+            <input class="main-pannel-control" type="number" id="input-real-height" oninput="checkInputSize();">
+            <div id="text-metrical-2">см</div>         
+        </p>
+        <p>
+            <button type="submit" id="accept-size-project" onclick="changeSizeProject()">Создать новый</button>
+        </p>
+        <p>
+            <div id="default-layer">У вас нет активных слоёв</div>
+        </p>
+        <p>
+            <div id="main-layer">
+                <input type="image" src="../static/add_effect.svg" id="add-effect-button" onclick="addEffect();">
+                <div id="text-main-layer">Добавить эффект</div>
+            </div>
+        </p>
+        <p>
+            <div id="choice-next-layer">
+                <div class="effects-adds" id="text-choice-effect">Выберите эффект</div>
+                <div class="effects-adds" id="shrift-add" title="Шрифты" onclick="addShrift();">Шрифты</div>
+                <div class="effects-adds" id="call-add" title="Калиграфия">Калиграфия</div>
+                <div class="effects-adds" id="dot-add" title="Разноразмерная техника">Разноразмерная техника</div>
+            </div>
+        </p>
+
+    </div>
+    <div class="main-layout">
+        <img id="prewiew-image" onclick="onClickImage();">
+    </div>
+    <div class="main-pannel-layout-control">
+        <div id="label-lays">Слои</div>
+        <div class="lays" id="lays-place">
+            
+        </div>
+    </div>
+    <div id="loads">
+        <span class="loader" id="loader"></span>
+    </div>
+    
+
+</body>
+</html>
