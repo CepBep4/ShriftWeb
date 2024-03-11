@@ -60,11 +60,7 @@ class ConstructProgect:
                     effect: str,
                     params: tuple
     ):
-        match effect:
-            case 'TEXT':
-                self.objects[index][0]=text_render(*params)
-            case _:
-                pass
+        pass
 
     def DeleteEffect(self, ids):
         print(ids)
